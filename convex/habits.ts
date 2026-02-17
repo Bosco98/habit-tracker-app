@@ -99,3 +99,23 @@ export const getLogs = query({
       .collect();
   },
 });
+
+export const getLogsRange = query({
+  args: {
+    userId: v.id("users"),
+    startDate: v.string(),
+    endDate: v.string()
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db
+      .query("habit_logs")
+      .withIndex("by_user_date", (q) =>
+        q.eq("userId", args.userId)
+      )
+      .filter((q) =>
+        q.gte(q.field("date"), args.startDate) &&
+        q.lte(q.field("date"), args.endDate)
+      )
+      .collect();
+  },
+});
