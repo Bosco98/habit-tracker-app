@@ -15,6 +15,7 @@ export const neoTheme = {
     success: "#4CAF50",
     google: "#FFFFFF",
     inputPlaceholder: "#9CA3AF",
+    highlight: "#FDE047",
   },
   spacing: {
     xs: 4,
