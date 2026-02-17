@@ -6,6 +6,7 @@ import { Input } from "../../src/components/ui/Input";
 import { Button } from "../../src/components/ui/Button";
 import { theme } from "../../src/theme";
 import { Typography } from "../../src/components/ui/Typography";
+import { GoogleSignIn } from "../../src/components/auth/GoogleSignIn";
 
 export default function Signup() {
   const { isLoaded, signUp, setActive } = useSignUp();
@@ -60,6 +61,9 @@ export default function Signup() {
 
       {!pendingVerification ? (
         <>
+          <GoogleSignIn />
+          <Typography variant="body" style={{ textAlign: 'center', marginVertical: 16 }}>OR</Typography>
+
           <Input
             label="Email"
             placeholder="Enter your email"

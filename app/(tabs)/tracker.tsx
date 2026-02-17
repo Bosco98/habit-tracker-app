@@ -110,7 +110,7 @@ export default function Tracker() {
         return {
             value: rate,
             label: h.title.substring(0, 3), // Short label
-            frontColor: '#A3E635' // Default color
+            frontColor: theme.colors.success // Default color
         };
     });
 
@@ -130,10 +130,10 @@ export default function Tracker() {
         <Typography variant="h1">Habit Tracker</Typography>
         <View style={styles.headerIcons}>
           <Pressable style={styles.iconButton} onPress={() => {}}>
-            <Settings size={24} color="#000" />
+            <Settings size={24} color={theme.colors.border} />
           </Pressable>
-          <Pressable style={[styles.iconButton, { backgroundColor: '#C084FC' }]} onPress={() => {}}>
-            <Share2 size={24} color="#000" />
+          <Pressable style={[styles.iconButton, { backgroundColor: theme.colors.iconPurple }]} onPress={() => {}}>
+            <Share2 size={24} color={theme.colors.border} />
           </Pressable>
         </View>
       </View>
@@ -179,7 +179,7 @@ export default function Tracker() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FEFCE8', // Cream/Beige background from design
+    backgroundColor: theme.colors.background,
     paddingTop: 50, // Safe area
   },
   header: {
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 2,
     borderColor: theme.colors.border,
-    backgroundColor: '#FDE047', // Yellow-300
+    backgroundColor: theme.colors.buttonYellow,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: theme.shadows.default.shadowColor,
@@ -217,12 +217,12 @@ const styles = StyleSheet.create({
     width: 64,
     height: 64,
     borderRadius: 32,
-    backgroundColor: '#000',
+    backgroundColor: theme.colors.border,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#FFF',
-    shadowColor: '#000',
+    borderColor: theme.colors.surface,
+    shadowColor: theme.colors.border,
     shadowOffset: { width: 4, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 4,

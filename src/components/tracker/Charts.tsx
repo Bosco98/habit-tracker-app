@@ -56,7 +56,7 @@ export const Charts: React.FC<ChartsProps> = ({ xpTrendData, consistencyData }) 
             yAxisThickness={0}
             xAxisColor={theme.colors.border}
             yAxisTextStyle={{ color: theme.colors.text }}
-            frontColor={theme.colors.secondary}
+            frontColor={theme.colors.success}
             noOfSections={4}
             maxValue={100}
           />

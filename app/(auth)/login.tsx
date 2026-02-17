@@ -6,6 +6,7 @@ import { Input } from "../../src/components/ui/Input";
 import { Button } from "../../src/components/ui/Button";
 import { theme } from "../../src/theme";
 import { Typography } from "../../src/components/ui/Typography";
+import { GoogleSignIn } from "../../src/components/auth/GoogleSignIn";
 
 export default function Login() {
   const { signIn, setActive, isLoaded } = useSignIn();
@@ -43,6 +44,10 @@ export default function Login() {
       <Typography variant="h1" style={{ marginBottom: theme.spacing.xl, color: theme.colors.primary, textAlign: 'center' }}>
         HABIT TRACKER
       </Typography>
+
+      <GoogleSignIn />
+
+      <Typography variant="body" style={{ textAlign: 'center', marginVertical: 16 }}>OR</Typography>
 
       <Input
         label="Email"

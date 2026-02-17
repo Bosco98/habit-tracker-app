@@ -3,12 +3,22 @@ export const theme = {
     primary: '#8B5CF6', // Vibrant Purple
     secondary: '#10B981', // Emerald Green
     accent: '#F59E0B', // Amber
-    background: '#F3F4F6', // Light Gray
+    background: '#FEFCE8', // Cream/Beige (updated from design)
     surface: '#FFFFFF', // White
     text: '#1F2937', // Dark Gray
     border: '#111827', // Almost Black
     error: '#EF4444', // Red
-    success: '#10B981', // Green
+    success: '#A3E635', // Lime Green (updated from design)
+    warning: '#FDE047', // Yellow
+    info: '#60A5FA', // Blue
+
+    // Specific UI colors
+    chartPrimary: '#8B5CF6',
+    chartSecondary: '#A3E635',
+    missed: '#F472B6', // Pink/Red for missed habits
+    buttonYellow: '#FDE047',
+    iconPurple: '#C084FC',
+    progressBarBg: '#E5E7EB',
   },
   spacing: {
     xs: 4,

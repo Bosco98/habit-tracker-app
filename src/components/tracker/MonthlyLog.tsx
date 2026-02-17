@@ -75,12 +75,12 @@ export const MonthlyLog: React.FC<MonthlyLogProps> = ({
                       style={[
                         styles.cell,
                         { width: 40 },
-                        isCompleted && { backgroundColor: '#A3E635' }, // Lime green
-                        isMissed && { backgroundColor: '#F472B6' }, // Pink/Red
+                        isCompleted && { backgroundColor: theme.colors.success },
+                        isMissed && { backgroundColor: theme.colors.missed },
                       ]}
                     >
-                      {isCompleted && <Check size={16} color="#000" />}
-                      {isMissed && <X size={16} color="#000" />}
+                      {isCompleted && <Check size={16} color={theme.colors.border} />}
+                      {isMissed && <X size={16} color={theme.colors.border} />}
                     </TouchableOpacity>
                   );
                 })}
@@ -116,13 +116,13 @@ const styles = StyleSheet.create({
     borderBottomColor: theme.colors.border,
   },
   clearButton: {
-    backgroundColor: '#EF4444', // Red
+    backgroundColor: theme.colors.error,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: theme.borderRadius.sm,
     borderWidth: 2,
     borderColor: theme.colors.border,
-    shadowColor: '#000',
+    shadowColor: theme.colors.border,
     shadowOffset: { width: 2, height: 2 },
     shadowOpacity: 1,
     shadowRadius: 0,
@@ -148,6 +148,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   headerCell: {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: theme.colors.background,
   },
 });

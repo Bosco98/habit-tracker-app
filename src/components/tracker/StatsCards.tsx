@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20, // Circular
-    backgroundColor: '#60A5FA', // Blue-400
+    backgroundColor: theme.colors.info,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   progressBarBackground: {
     height: 12,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: theme.colors.progressBarBg,
     borderRadius: 6,
     borderWidth: 1,
     borderColor: theme.colors.border,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   progressBarFill: {
     height: '100%',
-    backgroundColor: '#A3E635', // Lime-400
+    backgroundColor: theme.colors.success,
     borderRightWidth: 1,
     borderRightColor: theme.colors.border,
   },
